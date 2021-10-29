@@ -1,9 +1,11 @@
 <template>
   <div class="aside">
     <div class="aside-header">
-      <img src="" alt="">
-      未登录
-      </div>
+      <el-button type="text" @click="dialogFormVisible = true"
+        >未登录</el-button
+      >
+      <Login :dialogFormVisible="dialogFormVisible" />
+    </div>
     <div class="aside-content">
       <div class="item">
         <router-link to="/findeMusic"> 发现音乐</router-link>
@@ -25,8 +27,16 @@
 </template>
 
 <script>
+import Login from '@/views/login/login.vue'
 export default {
-
+  data () {
+    return {
+      dialogFormVisible: false
+    }
+  },
+  components: {
+    Login
+  }
 }
 </script>
 

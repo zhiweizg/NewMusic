@@ -23,29 +23,27 @@ const routes = [
   {
     path: '/findeMusic',
     name: 'findMusic',
-    component: FindeMusic,
-    children: [
-      {
-        path: '/songlist',
-        component: SongList
-      },
-      {
-        path: '/radiostation',
-        component: RadioStation
-      },
-      {
-        path: '/songranking',
-        component: SongRanking
-      },
-      {
-        path: '/singer',
-        component: Singer
-      },
-      {
-        path: '/newsong',
-        component: NewSong
-      }
-    ]
+    component: FindeMusic
+  },
+  {
+    path: '/songlist',
+    component: SongList
+  },
+  {
+    path: '/radiostation',
+    component: RadioStation
+  },
+  {
+    path: '/songranking',
+    component: SongRanking
+  },
+  {
+    path: '/singer',
+    component: Singer
+  },
+  {
+    path: '/newsong',
+    component: NewSong
   }
 ]
 
