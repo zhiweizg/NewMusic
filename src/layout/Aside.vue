@@ -1,10 +1,9 @@
 <template>
   <div class="aside">
     <div class="aside-header">
-      <el-button type="text" @click="dialogFormVisible = true"
-        >未登录</el-button
-      >
-      <Login :dialogFormVisible="dialogFormVisible" />
+      <el-button type="text">
+        <router-link to="/login">未登录</router-link>
+      </el-button>
     </div>
     <div class="aside-content">
       <div class="item">
@@ -27,15 +26,12 @@
 </template>
 
 <script>
-import Login from '@/views/login/login.vue'
+
 export default {
   data () {
     return {
-      dialogFormVisible: false
+
     }
-  },
-  components: {
-    Login
   }
 }
 </script>
@@ -47,6 +43,14 @@ export default {
   .aside-header {
     height: 75px;
     line-height: 75px;
+    button {
+      margin-left: 40px;
+      text-decoration: none;
+      a {
+        text-decoration: none;
+        color: tomato;
+      }
+    }
   }
   .aside-content {
     display: flex;
