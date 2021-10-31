@@ -5,3 +5,8 @@ export function getMusic (limit) {
     url: `/personalized?limit=${limit}`
   })
 }
+export function getbanner () {
+  return request({
+    url: '/banner?type=0'
+  })
+}

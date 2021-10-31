@@ -14,6 +14,7 @@ const RadioStation = () => import('@/views/radioStation/radioStation.vue')
 const SongList = () => import('@/views/songList/songList.vue')
 const SongRanking = () => import('@/views/songRanking/songRanking.vue')
 const Singer = () => import('@/views/singer/singer.vue')
+const Login = () => import('@/views/login/login.vue')
 
 const routes = [
   {
@@ -23,29 +24,31 @@ const routes = [
   {
     path: '/findeMusic',
     name: 'findMusic',
-    component: FindeMusic,
-    children: [
-      {
-        path: '/songlist',
-        component: SongList
-      },
-      {
-        path: '/radiostation',
-        component: RadioStation
-      },
-      {
-        path: '/songranking',
-        component: SongRanking
-      },
-      {
-        path: '/singer',
-        component: Singer
-      },
-      {
-        path: '/newsong',
-        component: NewSong
-      }
-    ]
+    component: FindeMusic
+  },
+  {
+    path: '/songlist',
+    component: SongList
+  },
+  {
+    path: '/radiostation',
+    component: RadioStation
+  },
+  {
+    path: '/songranking',
+    component: SongRanking
+  },
+  {
+    path: '/singer',
+    component: Singer
+  },
+  {
+    path: '/newsong',
+    component: NewSong
+  },
+  {
+    path: '/login',
+    component: Login
   }
 ]
 

@@ -6,19 +6,19 @@
         <router-link to="/findeMusic">推荐音乐</router-link>
       </div>
       <div class="item">
-        <router-link to="/findeMusic/songlist">歌单</router-link>
+        <router-link to="/songlist">歌单</router-link>
       </div>
       <div class="item">
-        <router-link to="/findeMusic/radiostation">主播电台</router-link>
+        <router-link to="/radiostation">主播电台</router-link>
       </div>
       <div class="item">
-        <router-link to="/findeMusic/songranking">排行榜</router-link>
+        <router-link to="/songranking">排行榜</router-link>
       </div>
       <div class="item">
-        <router-link to="/findeMusic/singer">歌手</router-link>
+        <router-link to="/singer">歌手</router-link>
       </div>
       <div class="item">
-        <router-link to="/findeMusic/newsong">最新音乐</router-link>
+        <router-link to="/newsong">最新音乐</router-link>
       </div>
     </div>
     <div class="header-ending">
