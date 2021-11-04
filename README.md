@@ -2,9 +2,7 @@
 
 本项目仅用于学习。
 
-- [English](README_EN.md)
-
-[Github 地址](https://github.com/zhiweizg/NewMusic)
+- [Github 地址](https://github.com/zhiweizg/NewMusic)
 
 ### 项目介绍
 
@@ -13,15 +11,15 @@
 ```js
 ----master  //主分支
     项目技术栈：vue+vuex+vue-router+axios+element-ui
-
+```
 
 ### 后端API
 
 本项目后端所有数据来自开源项目NeteaseCloudMusicApi，下面附有后端开源项目地址、文档
 
-[后端API仓库地址](https://github.com/Binaryify/NeteaseCloudMusicApi)
+- [后端API仓库地址](https://github.com/Binaryify/NeteaseCloudMusicApi)
 
-[API文档](https://neteasecloudmusicapi.vercel.app/#/)
+- [API文档](https://neteasecloudmusicapi.vercel.app/#/)
 
 ### 运行项目
 
@@ -29,9 +27,9 @@
 
     1.1. git clone 后端仓库地址
 
-    1.2. cnpm install
+    1.2. npm install
 
-    1.3. node app
+    1.3. node app.js
 
 2. 运行本仓库代码
 
@@ -40,4 +38,3 @@
     2.2. cnpm install
 
     2.3. npm run serve
-```
