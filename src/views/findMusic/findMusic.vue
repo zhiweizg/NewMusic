@@ -8,7 +8,12 @@
     <div class="music">
       <p>推荐歌单 <i class="el-icon-arrow-right"></i></p>
       <div class="music-list">
-        <div class="music-item" v-for="item in musicList" :key="item.id">
+        <div
+          class="music-item"
+          v-for="item in musicList"
+          :key="item.id"
+          @click="goArtile(item.id)"
+        >
           <img :src="item.picUrl" alt="" />
           <p>{{ item.name }}</p>
         </div>
@@ -40,6 +45,9 @@ export default {
       const { data } = await getbanner()
       this.bannerList = data.banners
       console.log(this.bannerList)
+    },
+    goArtile (id) {
+      this.$router.replace(`/article/${id}`)
     }
   },
   created () {

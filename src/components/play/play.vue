@@ -49,9 +49,7 @@
       <!-- @mouseleave="hover = false" -->
       <!-- 进度条ui -->
       <el-slider
-        ref="volume"
         v-model="sliderVolume"
-        :format-tooltip="formatProcessToolTip_volume"
         @change="changeVolume"
         vertical
         height="80px"
@@ -72,7 +70,6 @@
 <script>
 function realFormatSecond (second) {
   var secondType = typeof second
-
   if (secondType === 'number' || secondType === 'string') {
     second = parseInt(second)
     var mimute = Math.floor(second / 60)
@@ -84,7 +81,6 @@ function realFormatSecond (second) {
     return '0:00:00'
   }
 }
-
 export default {
   data () {
     return {
@@ -95,7 +91,9 @@ export default {
         // 音频最大播放时长
         maxTime: 0
       },
+      // 声音进度条
       sliderVolume: 0,
+      // 时间进度条
       sliderTime: 0,
       isVolume: false
 
@@ -145,10 +143,7 @@ export default {
       index = parseInt(this.audio.maxTime / 100 * index)
       return '进度条: ' + realFormatSecond(index)
     },
-    formatProcessToolTip_volume (index = 0) {
-      index = parseInt(this.$refs.audio.volume / 100 * index)
-      return index
-    },
+
     // 静音
     mute () {
       this.isVolume = !this.isVolume
@@ -165,11 +160,10 @@ export default {
       return realFormatSecond(second)
     }
   },
-  created () {
-    this.$refs.audio.volume = this.sliderVolume
-  },
+
   watch: {
-    sliderVolume: function (newValue, old) {
+    sliderVolume: function (newValue, oldValue) {
+      this.$refs.audio.volume = newValue / 100
       if (!newValue) {
         this.isVolume = false
       } else {

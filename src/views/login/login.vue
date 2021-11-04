@@ -49,8 +49,8 @@ import { goLogin, checkPhone } from '@/api/login'
 export default {
   data () {
     var validatePhone = (rule, value, callback) => {
-      if (value === '') {
-        callback(new Error('请输入账号'))
+      if (!/^[1](([3][0-9])|([4][0,1,4-9])|([5][0-3,5-9])|([6][2,5,6,7])|([7][0-8])|([8][0-9])|([9][0-3,5-9]))[0-9]{8}$/.test(value)) {
+        return callback(new Error('手机号格式不对'))
       } else {
         callback()
       }
